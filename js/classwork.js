@@ -13,17 +13,15 @@ let n1 = 'Harry..Potter'
 let n2 = 'Ron---Whisley'
 let n3 = 'Hermione__Granger'
 
-let normaliseStr = str => {
-    strNew = str.replace('.', ' ').replaceAll('.', '');
-    strNew = strNew.replace('-', ' ').replaceAll('-', '');
-    strNew = strNew.replace('_', ' ').replaceAll('_', '');
+let normaliseStr = (str, symbol) => {
+    strNew = str.replace(symbol, ' ').replaceAll(symbol, '');
     console.log(`'${str}' перетворено на '${strNew}' `);
     console.log('--------------------------------')
     return strNew;
 };
-let newn1 = normaliseStr(n1);
-let newn2 = normaliseStr(n2);
-let newn3 = normaliseStr(n3);
+let newn1 = normaliseStr(n1, '.');
+let newn2 = normaliseStr(n2, '-');
+let newn3 = normaliseStr(n3, '_');
 // ------------------------------------------------------------------------------------------------
 
 // - створити функцію, яка генерує масив рандомних числових цілих значень в діапазоні від 0 до 100.
@@ -111,7 +109,6 @@ let coursesAndDurationArray = [
 ];
 console.log('початковий масив:');
 console.log(coursesAndDurationArray); //  Чому тут в консоль виводиться вже відсортований масив? якщо вивід в консоль відбувається до того як відпрацює sort?????
-coursesAndDurationArray.sort((a, b) => b.monthDuration - a.monthDuration);
 console.log('відсортований масив:');
 console.log(coursesAndDurationArray);
 console.log('-------------------------------------------------------------------------------------------');
