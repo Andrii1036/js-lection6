@@ -109,6 +109,7 @@ let coursesAndDurationArray = [
 ];
 console.log('початковий масив:');
 console.log(coursesAndDurationArray); //  Чому тут в консоль виводиться вже відсортований масив? якщо вивід в консоль відбувається до того як відпрацює sort?????
+coursesAndDurationArray.sort((a, b) => b.monthDuration - a.monthDuration);
 console.log('відсортований масив:');
 console.log(coursesAndDurationArray);
 console.log('-------------------------------------------------------------------------------------------');
