@@ -43,7 +43,7 @@ let numberOfItem = (num, item) => {
     return counter
 }
 
-numberOfItem(number, 1);
+numberOfItem(number, '1');
 // ---------------------------------------------------------------------------
 
 // Okten Html Mentor, [26.11.2021 11:58]
@@ -74,16 +74,13 @@ console.log(isPalindrome("hjask oiqwhrfoiqw ookj"));
 let isDegreeOf2 = number => {
     number = number / 2;
     if (number === 1) {
-        console.log('yes')
         return 'yes'
     } else if (number > 1) {
-        isDegreeOf2(number)
+        return isDegreeOf2(number)
     } else {
-        console.log('no')
         return 'no'
     }
 };
-// не розумію чому функція повертає Undefined?????????
 console.log(isDegreeOf2(64));
 console.log(isDegreeOf2(10));
 console.log(isDegreeOf2(9));
@@ -93,9 +90,8 @@ console.log(isDegreeOf2(9));
 // // Знайти набільший елемент в масиві за допомогою reduce
 // //     [1,6,9,0,17,88,4,7] -> 88
 
-// не впевнений що я правильно тут використовую можливості reduce!!!!!!!!
 let arr3 = [1, 6, 9, 0, 17, 88, 4, 7];
-let maxValue = arr3.reduce(function(previousValue, item) {
+let maxValue = arr3.reduce((previousValue, item) => {
     if (item > previousValue) {
         previousValue = item
     }
@@ -118,7 +114,6 @@ console.log(maxValue);
 // 879 -> 24
 // 11 -> 2
 
-let a12 = [1, 2, 3, 4];
 let a1 = 1234;
 let a2 = 879;
 let a3 = 11;
